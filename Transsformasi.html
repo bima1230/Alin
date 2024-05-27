@@ -195,8 +195,6 @@
 
 
 
-
-
 </ul>
 
     </div>
@@ -396,11 +394,13 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-penskalaan-scaling-matrix">2. Matriks Penskalaan (Scaling Matrix)</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-rotasi-rotation-matrix">3. Matriks Rotasi (Rotation Matrix)</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-refleksi-reflection-matrix">4. Matriks Refleksi (Reflection Matrix)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-shear-shear-matrix">5. Matriks Shear (Shear Matrix)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-translasi-translation-matrix">6. Matriks Translasi (Translation Matrix)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-penggunaan-matriks-transformasi">Contoh Penggunaan Matriks Transformasi</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rotasi-45-derajat">Rotasi 45 Derajat</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-sumbu-y">Refleksi terhadap sumbu y</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-shear-shear-matrix">5. Matriks Shear (Shear Matrix)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-translasi-translation-matrix">6. Matriks Translasi (Translation Matrix)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-penggunaan-matriks-transformasi">Contoh Penggunaan Matriks Transformasi</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rotasi-45-derajat">Rotasi 45 Derajat</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-sumbu-y">Refleksi terhadap sumbu y</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -458,13 +458,15 @@ R = \begin{pmatrix} \cos\theta &amp; -\sin\theta \\ \sin\theta &amp; \cos\theta 
 <h1>5. Matriks Shear (Shear Matrix)<a class="headerlink" href="#matriks-shear-shear-matrix" title="Link to this heading">#</a></h1>
 <p>Matriks shear menggeser satu sumbu dengan faktor yang sebanding dengan posisi sepanjang sumbu lain. Misalnya, shear di sumbu x:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\[ H_x = \begin{pmatrix} 1 &amp; k \\ 0 &amp; 1 \end{pmatrix} \]\end{split}\]</div>
-<p>Shear di sumbu y:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\[ H_y = \begin{pmatrix} 1 &amp; 0 \\ k &amp; 1 \end{pmatrix} \]\end{split}\]</div>
-</section>
+\[\begin{split}
+\[ H_x = \begin{pmatrix} 1 &amp; k \\ 0 &amp; 1 \end{pmatrix} \]
+\end{split}\]</div>
+<p>Shear di sumbu y:
+$<span class="math notranslate nohighlight">\(
+\[ H_y = \begin{pmatrix} 1 &amp; 0 \\ k &amp; 1 \end{pmatrix} \]
+\)</span>$</p>
 <section id="matriks-translasi-translation-matrix">
-<h1>6. Matriks Translasi (Translation Matrix)<a class="headerlink" href="#matriks-translasi-translation-matrix" title="Link to this heading">#</a></h1>
+<h2>6. Matriks Translasi (Translation Matrix)<a class="headerlink" href="#matriks-translasi-translation-matrix" title="Link to this heading">#</a></h2>
 <p>Translasi tidak bisa direpresentasikan langsung oleh matriks linier dalam bentuk standar, tetapi bisa dilakukan dengan matriks homogen. Dalam bentuk homogen (3x3 untuk 2D):</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -472,9 +474,9 @@ R = \begin{pmatrix} \cos\theta &amp; -\sin\theta \\ \sin\theta &amp; \cos\theta 
 \end{split}\]</div>
 </section>
 <section id="contoh-penggunaan-matriks-transformasi">
-<h1>Contoh Penggunaan Matriks Transformasi<a class="headerlink" href="#contoh-penggunaan-matriks-transformasi" title="Link to this heading">#</a></h1>
+<h2>Contoh Penggunaan Matriks Transformasi<a class="headerlink" href="#contoh-penggunaan-matriks-transformasi" title="Link to this heading">#</a></h2>
 <section id="rotasi-45-derajat">
-<h2>Rotasi 45 Derajat<a class="headerlink" href="#rotasi-45-derajat" title="Link to this heading">#</a></h2>
+<h3>Rotasi 45 Derajat<a class="headerlink" href="#rotasi-45-derajat" title="Link to this heading">#</a></h3>
 <p>Untuk memutar vektor (1, 0) sebesar 45 derajat searah jarum jam:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -487,7 +489,7 @@ R = \begin{pmatrix} \cos\theta &amp; -\sin\theta \\ \sin\theta &amp; \cos\theta 
 \end{split}\]</div>
 </section>
 <section id="refleksi-terhadap-sumbu-y">
-<h2>Refleksi terhadap sumbu y<a class="headerlink" href="#refleksi-terhadap-sumbu-y" title="Link to this heading">#</a></h2>
+<h3>Refleksi terhadap sumbu y<a class="headerlink" href="#refleksi-terhadap-sumbu-y" title="Link to this heading">#</a></h3>
 <p>Untuk merefleksikan vektor (2, 3) terhadap sumbu y:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -604,6 +606,7 @@ R = \begin{pmatrix} \cos\theta &amp; -\sin\theta \\ \sin\theta &amp; \cos\theta 
 </div>
 </section>
 </section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -664,11 +667,13 @@ R = \begin{pmatrix} \cos\theta &amp; -\sin\theta \\ \sin\theta &amp; \cos\theta 
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-penskalaan-scaling-matrix">2. Matriks Penskalaan (Scaling Matrix)</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-rotasi-rotation-matrix">3. Matriks Rotasi (Rotation Matrix)</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-refleksi-reflection-matrix">4. Matriks Refleksi (Reflection Matrix)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-shear-shear-matrix">5. Matriks Shear (Shear Matrix)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-translasi-translation-matrix">6. Matriks Translasi (Translation Matrix)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-penggunaan-matriks-transformasi">Contoh Penggunaan Matriks Transformasi</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rotasi-45-derajat">Rotasi 45 Derajat</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-sumbu-y">Refleksi terhadap sumbu y</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-shear-shear-matrix">5. Matriks Shear (Shear Matrix)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-translasi-translation-matrix">6. Matriks Translasi (Translation Matrix)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-penggunaan-matriks-transformasi">Contoh Penggunaan Matriks Transformasi</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rotasi-45-derajat">Rotasi 45 Derajat</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-sumbu-y">Refleksi terhadap sumbu y</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
