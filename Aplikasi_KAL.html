@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Selamat datang semuanya!!! &#8212; My sample book</title>
+    <title>Pagerank &#8212; My sample book</title>
   
   
   
@@ -59,10 +59,10 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Aplikasi_KAL';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Peramaan Sistem linier:" href="sistemlinier.html" />
+    <link rel="prev" title="Transformation linier" href="Transsformasi.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -125,8 +125,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -143,7 +141,7 @@
 
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -174,13 +172,13 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Selamat datang semuanya!!!
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="sistemlinier.html">Peramaan Sistem linier:</a></li>
 <li class="toctree-l1"><a class="reference internal" href="aljabarmatriks.html">Aljabar Matriks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Matrix_Invers.html">Matrix Invers</a></li>
@@ -195,7 +193,7 @@
 <li class="toctree-l1"><a class="reference internal" href="kofaktor.html">Kofaktor</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="Transsformasi.html">Transformation linier</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Aplikasi_KAL.html">Pagerank</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Pagerank</a></li>
 
 
 
@@ -270,7 +268,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FAplikasi_KAL.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -300,7 +298,7 @@
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/Aplikasi_KAL.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -310,7 +308,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -371,7 +369,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -382,11 +382,23 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Selamat datang semuanya!!!</h1>
+    <h1>Pagerank</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Pagerank</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep">Konsep</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#algorirma">Algorirma</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi">Implementasi</a></li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -396,12 +408,111 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="selamat-datang-semuanya">
-<h1>Selamat datang semuanya!!!<a class="headerlink" href="#selamat-datang-semuanya" title="Link to this heading">#</a></h1>
-<p>Perkenalkan nama saya Bima Amanta Putra, saya dari Prodi Teknik Informatika
-dengan nim 23-093, WEB Ini berisi kumpulan tugas KOMPUTASI ALJABAR LINIER.
-Semoga web ini dapat bermanfaat bagi kita semuanya.</p>
-<div class="toctree-wrapper compound">
+  <section id="pagerank">
+<h1>Pagerank<a class="headerlink" href="#pagerank" title="Link to this heading">#</a></h1>
+<p>PageRank (PR) adalah algoritma pencarian yang digunakan oleh Google Search untuk memberi peringkat halaman web, dalam mengukur seberapa pentingnya bagi pengguna di hasil mesin pencarian mereka.</p>
+<p>Menurut Google:</p>
+<p>PageRank bekerja dengan menghitung jumlah dan kualitas tautan ke suatu halaman untuk menentukan perkiraan kasar seberapa penting situs web tersebut. Asumsi yang mendasarinya adalah bahwa situs web yang lebih penting cenderung menerima lebih banyak tautan dari situs web lainnya.</p>
+<p>Saat ini, PageRank bukan satu-satunya algoritma pencarian yang digunakan oleh Google untuk mengurutkan hasil penelusuran, tetapi merupakan algoritma pertama yang digunakan oleh perusahaan itu, dan merupakan algoritma yang paling terkenal.Mulai 24 September 2019, PageRank dan semua paten terkaitnya sudah kedaluwarsa, sehingga tak dipakai lagi</p>
+</section>
+<section id="konsep">
+<h1>Konsep<a class="headerlink" href="#konsep" title="Link to this heading">#</a></h1>
+<p>Banyak cara digunakan search engine dalam menentukan kualitas/rangking sebuah halaman web, mulai dari penggunaan META Tags, isi dokumen, penekanan pada content dan masih banyak teknik lain atau gabungan teknik yang mungkin digunakan. Link popularity, sebuah teknologi yang dikembangkan untuk memperbaiki kekurangan dari teknologi lain (Meta Keywords, Meta Description) yang bisa dicurangi dengan halaman yang khusus di desain untuk search engine atau biasa disebut doorway pages. Dengan algoritma ‘PageRank’ ini, dalam setiap halaman akan diperhitungkan inbound link (link masuk) dan outbound link (link keuar) dari setiap halaman web.</p>
+<p>PageRank, memiliki konsep dasar yang sama dengan link popularity, tetapi tidak hanya memperhitungkan “jumlah” inbound dan outbound link. Pendekatan yang digunakan adalah sebuah halaman akan diangap penting jika halaman lain memiliki link ke halaman tersebut. Sebuah halaman juga akan menjadi semakin penting jika halaman lain yang memiliki rangking (pagerank) tinggi mengacu ke halaman tersebut.</p>
+<p>Dengan pendekatan yang digunakan PageRank, proses terjadi secara rekursif dimana sebuah rangking akan ditentukan oleh rangking dari halaman web yang rangkingnya ditentukan oleh rangking halaman web lain yang memiliki link ke halaman tersebut. Proses ini berarti suatu proses yang berulang (rekursif). Di dunia maya, ada jutaan bahkan milyaran halaman web. Oleh karena itu sebuah rangking halaman web ditentukan dari struktur link dari keseluruhan halaman web yang ada di dunia maya. Sebuah proses yang sangat besar dan komplek.</p>
+</section>
+<section id="algorirma">
+<h1>Algorirma<a class="headerlink" href="#algorirma" title="Link to this heading">#</a></h1>
+<p>Dari pendekatan yang sudah dijelaskan pada artikel konsep pagerank, Lawrence Page and Sergey Brin membuat algoritma pagerank seperti di bawah:</p>
+<p>Algoritma awal
+$<span class="math notranslate nohighlight">\(
+\text{PR}(A) = (1-d) + d \left( \frac{\text{PR}(T_1)}{C(T_1)} + \cdots + \frac{\text{PR}(T_n)}{C(T_n)} \right)
+\)</span>$</p>
+<p>Salah satu algoritma lain yang dipublikasikan</p>
+<div class="math notranslate nohighlight">
+\[
+PR(A) = \frac{(1-d)}{N} + d \left( \frac{PR(T1)}{C(T1)} + \ldots + \frac{PR(Tn)}{C(Tn)} \right)
+\]</div>
+<p>PR(A) adalah Pagerank halaman A</p>
+<p>PR(T1) adalah Pagerank halaman T1 yang mengacu ke halaman A</p>
+<p>C(T1) adalah jumlah link keluar (outbound link) pada halaman T1</p>
+<p>d adalah damping factor yang bisa diberi antara 0 dan 1.</p>
+<p>N adalah jumlah keseluruhan halaman web (yang terindeks oleh Google)</p>
+<p>Dari algoritma di atas dapat dilihat bahwa pagerank ditentukan untuk setiap halaman anda bukan keseluruhan situs web. Pagerank sebuah halaman ditentukan dari pagerank halaman yang mengacu kepadanya yang juga menjalani proses penentuan pagerank dengan cara yang sama, jadi proses ini akan berulang sampai ditemukan hasil yang tepat.</p>
+<p>Akan tetapi pagerank halaman A tidak langsung diberikan kepada halaman yang dituju, akan tetapi sebelumnya dibagi dengan jumlah link yang ada pada halaman T1 (outbound link), dan pagerank itu akan dibagi rata kepada setiap link yang ada pada halaman tersebut. Demikian juga dengan setiap halaman lain “Tn” yang mengacu ke halaman “A”.</p>
+<p>Setelah semua pagerank yang didapat dari halaman-halaman lain yang mengacu ke halaman “A” dijumlahkan, nilai itu kemudian dikalikan dengan damping factor yang bernilai antara 0 sampai 1. Hal ini dilakukan agar tidak keseluruhan nilai pagerank halaman T didistribusikan ke halaman A.</p>
+</section>
+<section id="implementasi">
+<h1>Implementasi<a class="headerlink" href="#implementasi" title="Link to this heading">#</a></h1>
+<p>dari algoritma tersebut dapat di dapat matrik yang di hasilkan dari banyaknya edge atau link yang menghubungkan page satu dengan page lainnya.</p>
+<p>yaitu matriks A yang menyatakan hubungan page 1 2 3 dan 4:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \begin{bmatrix}
+0 &amp; 0 &amp; 1 &amp; \frac{1}{2} \\
+\frac{1}{3} &amp; 0 &amp; 0 &amp; 0 \\
+\frac{1}{3} &amp; \frac{1}{2} &amp; 0 &amp; \frac{1}{2} \\
+\frac{1}{3} &amp; \frac{1}{2} &amp; 0 &amp; 0 \\
+\end{bmatrix}
+\end{split}\]</div>
+<p>Untuk mengetahui urutan page yang memiliki pengaruh penting atau yang banyak di rujuk oleh page” lainnya di gunakannlah algoritma PageRank dengan mengalikan matrik A dengan V sebagai indikator. V adalah matrik n X 1 yang memiliki jumlah total 1 dengan n yaitu banyaknya page yang di bandingkan.</p>
+<p>dari hasil perkalian A X V menghasilkan Vn dengan n adalah jumlah iterasi yang dilakukan Vn nantinya akan di kalikan kembali dengan A sehingga menghasilkan angka dengan Vn-(Vn-1) memiliki selisih sedikit atau sama dengan dengan nilai toleransi lebih kecil memperngaruhi ke akuratan data yang di dapatkan nantinya</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">],</span> <span class="c1"># matriks A yang di dapatkan dari hubungan ke empat Page</span>
+              <span class="p">[</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
+
+<span class="n">V</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.20</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.50</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.15</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.15</span><span class="p">]])</span> <span class="c1"># matrik V yang di buat dengan nilai probalitas bernilai 1</span>
+
+<span class="c1"># batas toleransi error bahwasanya hasil V nantinya di kuadratkan dan di jumlah kemudian di akar harus memiliki nilai &lt;0.01</span>
+<span class="n">error</span> <span class="o">=</span> <span class="mf">0.01</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># menghitung banyaknya iterasi</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">A</span> <span class="o">@</span> <span class="n">V</span> <span class="c1"># a merupakan tempat menyimpan hasil matrik A@V</span>
+    <span class="n">e</span><span class="o">=</span><span class="n">a</span><span class="o">-</span><span class="n">V</span> <span class="c1"># e merupakan selisih dari hasil perkalian sebelumnya</span>
+    <span class="n">f</span><span class="o">=</span><span class="mi">0</span> <span class="c1"># f untuk menyimpan selisih yang sudah di kuadratkan dari matrik e</span>
+    <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">e</span><span class="p">:</span>
+      <span class="n">f</span><span class="o">+=</span><span class="p">(</span><span class="n">d</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">f</span><span class="o">**</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">error</span><span class="p">:</span> <span class="c1"># kondisi dimanaa f harus &lt;= 0.01</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Converged at iteration:&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Result:&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+        <span class="k">break</span>
+    <span class="n">V</span> <span class="o">=</span> <span class="n">a</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ini adalah perulangan ke&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+    <span class="n">b</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">V</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ini adalah perulangan ke 1
+[[0.225     ]
+ [0.06666667]
+ [0.39166667]
+ [0.31666667]]
+ini adalah perulangan ke 2
+[[0.55      ]
+ [0.075     ]
+ [0.26666667]
+ [0.10833333]]
+ini adalah perulangan ke 3
+[[0.32083333]
+ [0.18333333]
+ [0.275     ]
+ [0.22083333]]
+Converged at iteration: 4
+Result: [[0.38541667]
+ [0.10694444]
+ [0.30902778]
+ [0.19861111]]
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 
@@ -435,14 +546,14 @@ Semoga web ini dapat bermanfaat bagi kita semuanya.</p>
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="right-next"
-       href="sistemlinier.html"
-       title="next page">
+    <a class="left-prev"
+       href="Transsformasi.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Peramaan Sistem linier:</p>
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Transformation linier</p>
       </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -450,6 +561,25 @@ Semoga web ini dapat bermanfaat bagi kita semuanya.</p>
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Pagerank</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep">Konsep</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#algorirma">Algorirma</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi">Implementasi</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>
